@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/config/page_route_name.dart';
-import 'package:news_app/features/splash_view.dart';
+import 'package:news_app/features/home/pages/home_view.dart';
+import 'package:news_app/features/splash/pages/splash_view.dart';
 
 class AppRouter {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -10,9 +11,9 @@ class AppRouter {
           builder: (context) => SplashView(),
           settings: settings,
         );
-      case PageRouteName.initial:
+      case PageRouteName.homeView:
         return MaterialPageRoute(
-          builder: (context) => SplashView(),
+          builder: (context) => HomeView(),
           settings: settings,
         );
       default:
