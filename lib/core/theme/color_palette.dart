@@ -8,6 +8,7 @@ class ColorPalette {
   static const Color customLightBlue = Color(0xff4882CF);
   static const Color customYellow = Color(0xffF2D352);
   static const Color customBlue = Color(0xff003E90);
-  static const Color white = Color(0xff003E90);
-  static const Color black = Color(0xff003E90);
+  static const Color white = Color.fromARGB(255, 255, 255, 255);
+  static const Color black = Color.fromARGB(255, 0, 0, 0);
+  static const Color customGrey = Color(0xff79828B);
 }
