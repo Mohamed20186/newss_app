@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/config/app_router.dart';
 import 'package:news_app/core/theme/application_theme_manager.dart';
-import 'package:news_app/features/splash/pages/splash_view.dart';
 
 import 'core/config/page_route_name.dart';
 

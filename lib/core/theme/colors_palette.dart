@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ColorPalette {
+class ColorsPalette {
   static const Color primaryColor = Color(0xff39A552);
   static const Color customRed = Color(0xffC91C22);
   static const Color customPink = Color(0xffED1E79);

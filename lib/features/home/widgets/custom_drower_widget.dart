@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/theme/color_palette.dart';
+import 'package:news_app/core/theme/colors_palette.dart';
 
 class CustomDrowerWidget extends StatelessWidget {
   const CustomDrowerWidget({super.key, required this.onCategoryChangedClicked});
@@ -11,7 +11,7 @@ class CustomDrowerWidget extends StatelessWidget {
     return Container(
       width: mediaQuery.width * 0.75,
       decoration: const BoxDecoration(
-        color: ColorPalette.white,
+        color: ColorsPalette.white,
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(30),
           bottomRight: Radius.circular(30),
@@ -21,7 +21,7 @@ class CustomDrowerWidget extends StatelessWidget {
         children: [
           Container(
             decoration: const BoxDecoration(
-              color: ColorPalette.primaryColor,
+              color: ColorsPalette.primaryColor,
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(30),
               ),
@@ -44,14 +44,14 @@ class CustomDrowerWidget extends StatelessWidget {
                 children: [
                   const Icon(
                     Icons.list,
-                    color: ColorPalette.black,
+                    color: ColorsPalette.black,
                     size: 45,
                   ),
                   const SizedBox(width: 10),
                   Text(
                     'Categories',
                     style: theme.textTheme.bodyLarge!
-                        .copyWith(color: ColorPalette.black, fontSize: 30),
+                        .copyWith(color: ColorsPalette.black, fontSize: 30),
                   )
                 ],
               ),
@@ -65,14 +65,14 @@ class CustomDrowerWidget extends StatelessWidget {
                 children: [
                   const Icon(
                     Icons.settings,
-                    color: ColorPalette.black,
+                    color: ColorsPalette.black,
                     size: 45,
                   ),
                   const SizedBox(width: 10),
                   Text(
                     'Settings',
                     style: theme.textTheme.bodyLarge!
-                        .copyWith(color: ColorPalette.black, fontSize: 30),
+                        .copyWith(color: ColorsPalette.black, fontSize: 30),
                   )
                 ],
               ),

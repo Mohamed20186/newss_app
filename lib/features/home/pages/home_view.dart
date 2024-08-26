@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:news_app/core/theme/color_palette.dart';
+import 'package:news_app/core/theme/colors_palette.dart';
 import 'package:news_app/features/home/widgets/category_item_widget.dart';
 import 'package:news_app/features/home/widgets/custom_drower_widget.dart';
 import 'package:news_app/features/home/widgets/selected_category_view.dart';
@@ -19,37 +19,37 @@ class _HomeViewState extends State<HomeView> {
       categoryId: 'sports',
       categoryName: 'Sports',
       categoryIcon: 'assets/icons/sports.png',
-      categoryBackGroundColor: ColorPalette.customRed,
+      categoryBackGroundColor: ColorsPalette.customRed,
     ),
     CategoryData(
       categoryId: 'bussines',
       categoryName: 'Bussines',
       categoryIcon: 'assets/icons/bussines.png',
-      categoryBackGroundColor: ColorPalette.customBrown,
+      categoryBackGroundColor: ColorsPalette.customBrown,
     ),
     CategoryData(
       categoryId: 'politics',
       categoryName: 'Politics',
       categoryIcon: 'assets/icons/Politics.png',
-      categoryBackGroundColor: ColorPalette.customBlue,
+      categoryBackGroundColor: ColorsPalette.customBlue,
     ),
     CategoryData(
       categoryId: 'health',
       categoryName: 'Health',
       categoryIcon: 'assets/icons/health.png',
-      categoryBackGroundColor: ColorPalette.customPink,
+      categoryBackGroundColor: ColorsPalette.customPink,
     ),
     CategoryData(
       categoryId: 'environment',
       categoryName: 'Environment',
       categoryIcon: 'assets/icons/environment.png',
-      categoryBackGroundColor: ColorPalette.customLightBlue,
+      categoryBackGroundColor: ColorsPalette.customLightBlue,
     ),
     CategoryData(
       categoryId: 'science',
       categoryName: 'Science',
       categoryIcon: 'assets/icons/science.png',
-      categoryBackGroundColor: ColorPalette.customRed,
+      categoryBackGroundColor: ColorsPalette.customRed,
     ),
   ];
 
@@ -59,7 +59,7 @@ class _HomeViewState extends State<HomeView> {
     var mediaQuery = MediaQuery.of(context).size;
     return Container(
       decoration: const BoxDecoration(
-        color: ColorPalette.white,
+        color: ColorsPalette.white,
         image: DecorationImage(
           image: AssetImage('assets/images/pattern.png'),
         ),
