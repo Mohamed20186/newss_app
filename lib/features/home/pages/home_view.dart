@@ -22,7 +22,7 @@ class _HomeViewState extends State<HomeView> {
       categoryBackGroundColor: ColorsPalette.customRed,
     ),
     CategoryData(
-      categoryId: 'bussines',
+      categoryId: 'business',
       categoryName: 'Bussines',
       categoryIcon: 'assets/icons/bussines.png',
       categoryBackGroundColor: ColorsPalette.customBrown,

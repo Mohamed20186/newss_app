@@ -7,7 +7,6 @@ import 'core/config/page_route_name.dart';
 
 void main() {
   runApp(const MyApp());
-  ApiManager.fetchSourcesList(categoryName: 'sports');
 }
 
 class MyApp extends StatelessWidget {

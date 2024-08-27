@@ -4,7 +4,7 @@ class ArticlesModel {
 
   ArticlesModel({required this.status, required this.articles});
 
-  factory ArticlesModel.fromJson(Map<String, dynamic> json) {
+  factory ArticlesModel.fromJson({required Map<String, dynamic> json}) {
     return ArticlesModel(
       status: json['status'],
       articles: List<Article>.from(
