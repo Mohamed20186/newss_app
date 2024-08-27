@@ -46,7 +46,7 @@ class AtricalView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 6),
                   child: Text(
-                    article.publishedAt,
+                    article.formattedPublishedAt,
                     style: theme.textTheme.displaySmall!
                         .copyWith(fontSize: 14, fontWeight: FontWeight.w500),
                   ),

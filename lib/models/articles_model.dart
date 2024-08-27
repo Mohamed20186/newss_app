@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 class ArticlesModel {
   final String status;
   final List<Article> articles;
@@ -43,5 +45,9 @@ class Article {
       publishedAt: json['publishedAt'] ?? 'Unknown',
       source: json['source']['name'] ?? 'Unknown',
     );
+  }
+  String get formattedPublishedAt {
+    DateTime dateTime = DateTime.parse(publishedAt);
+    return DateFormat('yyyy-MM-dd hh:mm a').format(dateTime);
   }
 }

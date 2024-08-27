@@ -24,10 +24,8 @@ class ApiManager {
 
   static Future<List<Article>> fetchArticlesList(
       {required String categoryName}) async {
-    var url = Uri.https(Constans.domain, '/v2/top-headlines', {
-      'apiKey': Constans.apiKey,
-      'category': categoryName,
-    });
+    var url = Uri.https(Constans.domain, '/v2/top-headlines',
+        {'apiKey': Constans.apiKey, 'category': categoryName, 'country': 'us'});
     final response = await http.get(url);
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
