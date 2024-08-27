@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:news_app/core/theme/colors_palette.dart';
 import 'package:news_app/features/home/widgets/category_item_widget.dart';
 import 'package:news_app/features/home/widgets/custom_drower_widget.dart';

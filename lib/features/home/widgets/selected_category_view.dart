@@ -46,11 +46,9 @@ class _SelectedCategoryViewState extends State<SelectedCategoryView> {
           ),
           builder: (context, snapshot) {
             if (snapshot.hasError) {
-              print("Error: ${snapshot.error}");
               return const Text('Error fetching articles');
             }
             if (snapshot.connectionState == ConnectionState.waiting) {
-              print("Loading...");
               return const Center(
                 child: CircularProgressIndicator(
                   color: ColorsPalette.primaryColor,
@@ -58,18 +56,15 @@ class _SelectedCategoryViewState extends State<SelectedCategoryView> {
               );
             }
             if (!snapshot.hasData || snapshot.data!.isEmpty) {
-              print("No data found");
               return const Text('No articles found');
             }
 
             List<Article> articleList = snapshot.data ?? [];
-            print("Articles fetched: ${articleList.length}");
 
             return Expanded(
               child: ListView.builder(
                 itemCount: articleList.length,
                 itemBuilder: (context, index) {
-                  print("Rendering article at index $index");
                   return AtricalView(article: articleList[index]);
                 },
               ),
