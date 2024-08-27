@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/config/app_router.dart';
+import 'package:news_app/core/network/api_manager.dart';
 import 'package:news_app/core/theme/application_theme_manager.dart';
 
 import 'core/config/page_route_name.dart';
 
 void main() {
   runApp(const MyApp());
+  ApiManager.fetchSourcesList(categoryName: 'sports');
 }
 
 class MyApp extends StatelessWidget {
