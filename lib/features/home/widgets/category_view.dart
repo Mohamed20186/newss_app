@@ -12,25 +12,23 @@ class CategoryView extends StatefulWidget {
   });
 
   @override
-  State<CategoryView> createState() =>
-      _CategoryViewState(sourcesList: sourcesList);
+  State<CategoryView> createState() => _CategoryViewState();
 }
 
 class _CategoryViewState extends State<CategoryView> {
-  final List<Source> sourcesList;
   int selectedIndex = 0;
 
-  _CategoryViewState({required this.sourcesList});
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         DefaultTabController(
-          length: sourcesList.length,
+          length: widget.sourcesList.length,
           child: TabBar(
             onTap: (index) {
-              selectedIndex = index;
-              setState(() {});
+              setState(() {
+                selectedIndex = index;
+              });
             },
             indicatorColor: Colors.transparent,
             dividerColor: Colors.transparent,

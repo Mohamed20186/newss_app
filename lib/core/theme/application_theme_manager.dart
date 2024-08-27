@@ -30,12 +30,12 @@ class ApplicationThemeManager {
           color: ColorsPalette.white,
         ),
         displaySmall: TextStyle(
-          fontSize: 10,
+          fontSize: 12,
           fontFamily: 'Exo',
           color: ColorsPalette.customGrey,
         ),
         displayMedium: TextStyle(
-          fontSize: 14,
+          fontSize: 15,
           fontFamily: 'Exo',
           fontWeight: FontWeight.w400,
           color: ColorsPalette.black,

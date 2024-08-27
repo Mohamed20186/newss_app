@@ -23,11 +23,10 @@ class ApiManager {
   }
 
   static Future<List<Article>> fetchArticlesList(
-      {required String categoryName, required String sources}) async {
+      {required String categoryName}) async {
     var url = Uri.https(Constans.domain, '/v2/top-headlines', {
       'apiKey': Constans.apiKey,
-      'q': categoryName,
-      'sources': sources,
+      'category': categoryName,
     });
     final response = await http.get(url);
     if (response.statusCode == 200) {

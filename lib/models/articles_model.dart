@@ -21,9 +21,11 @@ class Article {
   final String url;
   final String urlToImage;
   final String publishedAt;
+  final String source;
 
   Article(
-      {required this.author,
+      {required this.source,
+      required this.author,
       required this.title,
       required this.description,
       required this.url,
@@ -33,11 +35,13 @@ class Article {
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
       author: json['author'] ?? 'Unknown',
-      title: json['title'],
-      description: json['description'],
-      url: json['url'],
-      urlToImage: json['urlToImage'],
-      publishedAt: json['publishedAt'],
+      title: json['title'] ?? 'Unknown',
+      description: json['description'] ?? 'Unknown',
+      url: json['url'] ?? '',
+      urlToImage: json['urlToImage'] ??
+          'https://thumbs.dreamstime.com/b/error-rubber-stamp-word-error-inside-illustration-109026446.jpg',
+      publishedAt: json['publishedAt'] ?? 'Unknown',
+      source: json['source']['name'] ?? 'Unknown',
     );
   }
 }
