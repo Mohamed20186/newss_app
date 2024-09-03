@@ -22,7 +22,7 @@ class ArticalDetailsView extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         decoration: const BoxDecoration(
           color: Color.fromARGB(255, 255, 255, 255),
           image: DecorationImage(
@@ -37,7 +37,7 @@ class ArticalDetailsView extends StatelessWidget {
               borderRadius: BorderRadius.circular(25),
               child: Image.network(argument.urlToImage),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 6),
               child: Text(
@@ -45,14 +45,14 @@ class ArticalDetailsView extends StatelessWidget {
                 style: theme.textTheme.displaySmall,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               argument.title,
               style: theme.textTheme.displayMedium!
                   .copyWith(overflow: TextOverflow.ellipsis),
               maxLines: 3,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -66,9 +66,9 @@ class ArticalDetailsView extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               width: mediaQuery.width,
               decoration: BoxDecoration(
                 color: ColorsPalette.white,
@@ -77,12 +77,12 @@ class ArticalDetailsView extends StatelessWidget {
               child: Text(
                 maxLines: 12,
                 overflow: TextOverflow.ellipsis,
-                "Through limiting access to grazing land, outpost settlers like Moshe Sharvit are able to put Palestinian farmers in increasingly precarious positions, says Moayad Shaaban, the head of the Palestinian… [+1444 chars] Through limiting access to grazing land, outpost settlers like Moshe Sharvit are able to put Palestinian farmers in increasingly precarious positions, says Moayad Shaaban, the head of the Palestinian… [+1444 chars] Through limiting access to grazing land, outpost settlers like Moshe Sharvit are able to put Palestinian farmers in increasingly precarious positions, says Moayad Shaaban, the head of the Palestinian… [+1444 chars] Through limiting access to grazing land, outpost settlers like Moshe Sharvit are able to put Palestinian farmers in increasingly precarious positions, says Moayad Shaaban, the head of the Palestinian… [+1444 chars] Through limiting access to grazing land, outpost settlers like Moshe Sharvit are able to put Palestinian farmers in increasingly precarious positions, says Moayad Shaaban, the head of the Palestinian… [+1444 chars] Through limiting access to grazing land, outpost settlers like Moshe Sharvit are able to put Palestinian farmers in increasingly precarious positions, says Moayad Shaaban, the head of the Palestinian… [+1444 chars]",
+                argument.description,
                 style: theme.textTheme.displayMedium!
                     .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             InkWell(
               onTap: () async {
                 await launchInBrowser(url: argument.url);
@@ -98,7 +98,7 @@ class ArticalDetailsView extends StatelessWidget {
                           .copyWith(fontSize: 15, fontWeight: FontWeight.w800),
                     ),
                   ),
-                  Icon(
+                  const Icon(
                     Icons.arrow_right,
                     color: Colors.black,
                   ),

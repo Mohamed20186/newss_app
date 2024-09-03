@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/config/page_route_name.dart';
 import 'package:news_app/features/home/pages/home_view.dart';
-import 'package:news_app/features/home/widgets/artical_details_view.dart';
+import 'package:news_app/features/artical_details_view/page/artical_details_view.dart';
 import 'package:news_app/features/splash/pages/splash_view.dart';
 
 class AppRouter {
