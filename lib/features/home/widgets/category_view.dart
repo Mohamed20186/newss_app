@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/models/source_model.dart';
 
+import 'articals_by_sources.dart';
 import 'tap_bar_item.dart';
 
 class CategoryView extends StatefulWidget {
@@ -20,33 +21,38 @@ class _CategoryViewState extends State<CategoryView> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        DefaultTabController(
-          length: widget.sourcesList.length,
-          child: TabBar(
-            onTap: (index) {
-              setState(() {
-                selectedIndex = index;
-              });
-            },
-            indicatorColor: Colors.transparent,
-            dividerColor: Colors.transparent,
-            padding: EdgeInsets.zero,
-            indicatorPadding: EdgeInsets.zero,
-            isScrollable: true,
-            tabs: widget.sourcesList
-                .map(
-                  (element) => TapBarItem(
-                    source: element,
-                    isSelected:
-                        selectedIndex == widget.sourcesList.indexOf(element),
-                  ),
-                )
-                .toList(),
+    return Expanded(
+      child: Column(
+        children: [
+          DefaultTabController(
+            length: widget.sourcesList.length,
+            child: TabBar(
+              onTap: (index) {
+                setState(() {
+                  selectedIndex = index;
+                });
+              },
+              indicatorColor: Colors.transparent,
+              dividerColor: Colors.transparent,
+              padding: EdgeInsets.zero,
+              indicatorPadding: EdgeInsets.zero,
+              isScrollable: true,
+              tabs: widget.sourcesList
+                  .map(
+                    (element) => TapBarItem(
+                      source: element,
+                      isSelected:
+                          selectedIndex == widget.sourcesList.indexOf(element),
+                    ),
+                  )
+                  .toList(),
+            ),
           ),
-        ),
-      ],
+          Expanded(
+              child:
+                  ArticalsBySources(source: widget.sourcesList[selectedIndex])),
+        ],
+      ),
     );
   }
 }

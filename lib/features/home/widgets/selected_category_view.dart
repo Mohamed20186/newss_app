@@ -40,51 +40,19 @@ class _SelectedCategoryViewState extends State<SelectedCategoryView> {
             );
           },
         ),
-        FutureBuilder<List<Article>>(
-          future: ApiManager.fetchArticlesList(
-            categoryName: widget.categoryData.categoryId,
-          ),
-          builder: (context, snapshot) {
-            if (snapshot.hasError) {
-              return const Text('Error fetching articles');
-            }
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(
-                child: CircularProgressIndicator(
-                  color: ColorsPalette.primaryColor,
-                ),
-              );
-            }
-            if (!snapshot.hasData || snapshot.data!.isEmpty) {
-              return const Text('No articles found');
-            }
-
-            List<Article> articleList = snapshot.data ?? [];
-
-            return Expanded(
-              child: ListView.builder(
-                itemCount: articleList.length,
-                itemBuilder: (context, index) {
-                  return AtricalView(article: articleList[index]);
-                },
-              ),
-            );
-          },
-        )
+        /**
+         * 
+         * 
+         *  
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
+         */
       ],
     );
   }
 }
-
-
-/* 
-
- Expanded(
-          child: ListView.builder(
-            itemCount: 4,
-            itemBuilder: (context, index) {
-              return AtricalView();
-            },
-          ),
-        ),
-*/
