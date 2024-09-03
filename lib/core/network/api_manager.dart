@@ -31,7 +31,6 @@ class ApiManager {
     final response = await http.get(url);
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
-      print(data);
       ArticlesModel source = ArticlesModel.fromJson(json: data);
       return source.articles;
     } else {

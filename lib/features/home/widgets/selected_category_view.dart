@@ -35,23 +35,18 @@ class _SelectedCategoryViewState extends State<SelectedCategoryView> {
               );
             }
             List<Source> sourcesList = snapshot.data ?? [];
-            return CategoryView(
-              sourcesList: sourcesList,
-            );
+            return sourcesList.isEmpty
+                ? Center(
+                    child: Image.asset(
+                      'assets/images/warning.png',
+                      scale: 5,
+                    ),
+                  )
+                : CategoryView(
+                    sourcesList: sourcesList,
+                  );
           },
         ),
-        /**
-         * 
-         * 
-         *  
-         * 
-         * 
-         * 
-         * 
-         * 
-         * 
-         * 
-         */
       ],
     );
   }

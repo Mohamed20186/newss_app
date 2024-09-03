@@ -17,7 +17,12 @@ class ArticalsBySources extends StatelessWidget {
       ),
       builder: (context, snapshot) {
         if (snapshot.hasError) {
-          return const Text('Error fetching articles');
+          return Center(
+            child: Image.asset(
+              'assets/images/warning.png',
+              scale: 5,
+            ),
+          );
         }
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(
@@ -27,7 +32,12 @@ class ArticalsBySources extends StatelessWidget {
           );
         }
         if (!snapshot.hasData || snapshot.data!.isEmpty) {
-          return const Text('No articles found');
+          return Center(
+            child: Image.asset(
+              'assets/images/warning.png',
+              scale: 5,
+            ),
+          );
         }
 
         List<Article> articleList = snapshot.data ?? [];

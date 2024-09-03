@@ -71,36 +71,41 @@ class ArticalDetailsView extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               width: mediaQuery.width,
               decoration: BoxDecoration(
-                color: ColorsPalette.white,
+                color:
+                    const Color.fromARGB(255, 151, 150, 150).withOpacity(0.1),
                 borderRadius: BorderRadius.circular(25),
               ),
-              child: Text(
-                maxLines: 12,
-                overflow: TextOverflow.ellipsis,
-                argument.description,
-                style: theme.textTheme.displayMedium!
-                    .copyWith(fontSize: 16, fontWeight: FontWeight.w400),
-              ),
-            ),
-            const SizedBox(height: 10),
-            InkWell(
-              onTap: () async {
-                await launchInBrowser(url: argument.url);
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+              child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6),
-                    child: Text(
-                      'View Full Article',
-                      style: theme.textTheme.displaySmall!
-                          .copyWith(fontSize: 15, fontWeight: FontWeight.w800),
-                    ),
+                  Text(
+                    maxLines: 12,
+                    overflow: TextOverflow.ellipsis,
+                    argument.description,
+                    style: theme.textTheme.displayMedium!.copyWith(
+                        fontSize: 16, fontWeight: FontWeight.w400, height: 1.5),
                   ),
-                  const Icon(
-                    Icons.arrow_right,
-                    color: Colors.black,
+                  const SizedBox(height: 20),
+                  InkWell(
+                    onTap: () async {
+                      await launchInBrowser(url: argument.url);
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 6),
+                          child: Text(
+                            'View Full Article',
+                            style: theme.textTheme.displaySmall!.copyWith(
+                                fontSize: 15, fontWeight: FontWeight.w800),
+                          ),
+                        ),
+                        const Icon(
+                          Icons.arrow_right,
+                          color: Colors.black,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
