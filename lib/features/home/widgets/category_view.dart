@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/controller/artical_view_model.dart';
 import 'package:news_app/core/data/models/source_model.dart';
+import 'package:provider/provider.dart';
 
 import 'articals_by_sources.dart';
 import 'tap_bar_item.dart';
 
 class CategoryView extends StatefulWidget {
   final List<Source> sourcesList;
-
-  const CategoryView({
+  var atricalsViewModel = ArticalViewModel();
+  CategoryView({
     super.key,
     required this.sourcesList,
   });
@@ -30,6 +32,8 @@ class _CategoryViewState extends State<CategoryView> {
               onTap: (index) {
                 setState(() {
                   selectedIndex = index;
+                  widget.atricalsViewModel.getArticlesList(
+                      sourceName: widget.sourcesList[selectedIndex].id);
                 });
               },
               indicatorColor: Colors.transparent,
@@ -48,9 +52,16 @@ class _CategoryViewState extends State<CategoryView> {
                   .toList(),
             ),
           ),
-          Expanded(
-              child:
-                  ArticalsBySources(source: widget.sourcesList[selectedIndex])),
+          ChangeNotifierProvider(
+            create: (context) => widget.atricalsViewModel
+              ..getArticlesList(
+                  sourceName: widget.sourcesList[selectedIndex].id),
+            child: Consumer<ArticalViewModel>(builder: (context, vm, child) {
+              return Expanded(
+                  child: ArticalsBySources(
+                      source: widget.sourcesList[selectedIndex]));
+            }),
+          ),
         ],
       ),
     );
