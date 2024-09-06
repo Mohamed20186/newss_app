@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/config/page_route_name.dart';
 import 'package:news_app/core/theme/colors_palette.dart';
-import 'package:news_app/models/articles_model.dart';
+import 'package:news_app/core/data/models/articles_model.dart';
 
 class AtricalView extends StatelessWidget {
   const AtricalView({super.key, required this.article});

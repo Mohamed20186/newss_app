@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/network/api_manager.dart';
 import 'package:news_app/features/home/widgets/atrical_view.dart';
-import 'package:news_app/models/articles_model.dart';
-import 'package:news_app/models/source_model.dart';
+import 'package:news_app/core/data/models/articles_model.dart';
+import 'package:news_app/core/data/models/source_model.dart';
 
 import '../../../core/theme/colors_palette.dart';
 

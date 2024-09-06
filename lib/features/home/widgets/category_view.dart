@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/models/source_model.dart';
+import 'package:news_app/core/data/models/source_model.dart';
 
 import 'articals_by_sources.dart';
 import 'tap_bar_item.dart';

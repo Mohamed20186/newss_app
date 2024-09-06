@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/theme/colors_palette.dart';
-import 'package:news_app/models/source_model.dart';
+import 'package:news_app/core/data/models/source_model.dart';
 
 class TapBarItem extends StatelessWidget {
   const TapBarItem({super.key, required this.source, required this.isSelected});

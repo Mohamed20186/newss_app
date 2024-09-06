@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:news_app/core/config/constans.dart';
-import 'package:news_app/models/articles_model.dart';
-import 'package:news_app/models/source_model.dart';
+import 'package:news_app/core/data/models/articles_model.dart';
+import 'package:news_app/core/data/models/source_model.dart';
 
 class ApiManager {
   static Future<List<Source>> fetchSourcesList(

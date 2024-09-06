@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/theme/colors_palette.dart';
-import 'package:news_app/models/articles_model.dart';
+import 'package:news_app/core/data/models/articles_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ArticalDetailsView extends StatelessWidget {

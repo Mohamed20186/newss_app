@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:news_app/core/theme/colors_palette.dart';
 import 'package:news_app/features/home/widgets/category_item_widget.dart';
 import 'package:news_app/features/home/widgets/custom_drower_widget.dart';
-import 'package:news_app/features/home/widgets/selected_category_view.dart';
-import 'package:news_app/models/category_data.dart';
+import 'package:news_app/features/home/pages/selected_category_view.dart';
+import 'package:news_app/core/data/models/category_data.dart';
 
 class HomeView extends StatefulWidget {
   HomeView({super.key});
