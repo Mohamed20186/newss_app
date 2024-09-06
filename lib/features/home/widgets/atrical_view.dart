@@ -33,7 +33,7 @@ class AtricalView extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.network(
-                  article.urlToImage ?? '',
+                  article.urlToImage,
                   errorBuilder: (context, error, stackTrace) {
                     return Image.network(
                       'https://thumbs.dreamstime.com/b/error-rubber-stamp-word-error-inside-illustration-109026446.jpg',
